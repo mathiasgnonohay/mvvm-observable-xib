@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B7013D72C35B412006511F7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7013D62C35B412006511F7 /* MainViewModel.swift */; };
 		8B8627212C35A45500A9F43F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8627202C35A45500A9F43F /* AppDelegate.swift */; };
 		8B86272A2C35A45800A9F43F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8627292C35A45800A9F43F /* Assets.xcassets */; };
 		8B86272D2C35A45800A9F43F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8B86272C2C35A45800A9F43F /* Base */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B7013D62C35B412006511F7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		8B86271D2C35A45500A9F43F /* FeaturedMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeaturedMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8627202C35A45500A9F43F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8627292C35A45800A9F43F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		8B8627442C35AF8200A9F43F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8B7013D62C35B412006511F7 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				8B8627212C35A45500A9F43F /* AppDelegate.swift in Sources */,
 				8B86273C2C35AD5C00A9F43F /* MainViewController.swift in Sources */,
+				8B7013D72C35B412006511F7 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
