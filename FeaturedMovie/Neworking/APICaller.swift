@@ -13,6 +13,9 @@ enum NetworkError: Error {
 }
 
 public class APICaller {
+    
+    private init() { }
+    
     static func getTrendingMovies(completionHandler: @escaping(_ result: Result<TrendingMovieModel, NetworkError>) -> Void) {
         let urlString = NetworkConstant.shared.serverAddress + "trending/all/days?api_key=" + NetworkConstant.shared.apiKey
         guard let url = URL(string: urlString) else { 
@@ -29,8 +32,6 @@ public class APICaller {
             } else {
                 completionHandler(.failure(.cannotParseData))
             }
-            
-            
         }.resume()
     }
 }

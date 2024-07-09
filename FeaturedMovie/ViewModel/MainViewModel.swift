@@ -16,4 +16,15 @@ class MainViewModel {
     func numberOfRows(in section: Int) -> Int {
         return 5
     }
+    
+    func getData() {
+        APICaller.getTrendingMovies { result in
+            switch result {
+            case .success(let success):
+                <#code#>
+            case .failure(let failure):
+                <#code#>
+            }
+        }
+    }
 }
