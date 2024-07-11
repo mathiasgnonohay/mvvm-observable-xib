@@ -16,6 +16,7 @@
 		8B86272D2C35A45800A9F43F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8B86272C2C35A45800A9F43F /* Base */; };
 		8B86273B2C35AD5C00A9F43F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B86273A2C35AD5C00A9F43F /* MainViewController.xib */; };
 		8B86273C2C35AD5C00A9F43F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8627392C35AD5C00A9F43F /* MainViewController.swift */; };
+		8BF8322D2C402881003FA6B3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF8322C2C402881003FA6B3 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8B86272E2C35A45800A9F43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B8627392C35AD5C00A9F43F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8B86273A2C35AD5C00A9F43F /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		8BF8322C2C402881003FA6B3 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		8B909B792C35B00500D2BF35 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8BF8322C2C402881003FA6B3 /* Observable.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				8B4F2E8F2C36F02800D3E0E5 /* NetworkConstant.swift in Sources */,
 				8B8627212C35A45500A9F43F /* AppDelegate.swift in Sources */,
 				8B86273C2C35AD5C00A9F43F /* MainViewController.swift in Sources */,
+				8BF8322D2C402881003FA6B3 /* Observable.swift in Sources */,
 				8B4F2E912C36F1DC00D3E0E5 /* APICaller.swift in Sources */,
 				8B7013D72C35B412006511F7 /* MainViewModel.swift in Sources */,
 				8B4F2E932C36F23B00D3E0E5 /* TrendingMoviesModel.swift in Sources */,

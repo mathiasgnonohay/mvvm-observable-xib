@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var viewModel: MainViewModel = MainViewModel()
     
@@ -18,12 +19,36 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         self.configureView()
+        self.bindViewModel()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.getData()
     }
     
     private func configureView() {
         self.title = "Movies"
         
         self.configureTableView()
+    }
+    
+    private func bindViewModel() {
+        viewModel.isLoading.bind { [weak self] isLoading in
+            guard let self,
+                  let isLoading else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                if isLoading {
+                    self.activityIndicator.startAnimating()
+                } else {
+                    self.activityIndicator.stopAnimating()
+                }
+            }
+            
+        }
     }
 }
 

@@ -17,16 +17,16 @@ public class APICaller {
     private init() { }
     
     static func getTrendingMovies(completionHandler: @escaping(_ result: Result<TrendingMovieModel, NetworkError>) -> Void) {
-        let urlString = NetworkConstant.shared.serverAddress + "trending/all/days?api_key=" + NetworkConstant.shared.apiKey
+        let urlString = NetworkConstant.shared.serverAddress + "trending/all/day?api_key=" + NetworkConstant.shared.apiKey
         guard let url = URL(string: urlString) else { 
             completionHandler(.failure(.urlError))
             return
         }
         
-        URLSession.shared.dataTask(with: url) { dataResposee, response, error in
+        URLSession.shared.dataTask(with: url) { dataRespose, response, error in
             
             if error == nil,
-               let data = dataResposee,
+               let data = dataRespose,
                let resultData = try? JSONDecoder().decode(TrendingMovieModel.self, from: data) {
                 completionHandler(.success(resultData))
             } else {

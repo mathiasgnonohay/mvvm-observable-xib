@@ -9,6 +9,9 @@ import UIKit
 
 class MainViewModel {
     
+    var isLoading: Observable<Bool> = Observable(false)
+    var dataSource: TrendingMovieModel?
+    
     func numberOfSections() -> Int {
         return 1
     }
@@ -18,12 +21,21 @@ class MainViewModel {
     }
     
     func getData() {
-        APICaller.getTrendingMovies { result in
+        if isLoading.value ?? true { return }
+        
+        isLoading.value = true
+        
+        APICaller.getTrendingMovies { [weak self] result in
+            guard let self else { return }
+            
+            self.isLoading.value = false
+            
             switch result {
-            case .success(let success):
-                <#code#>
-            case .failure(let failure):
-                <#code#>
+            case .success(let data):
+                print("API Caller getTrendingMovie did finish with success: \(data.results.count)")
+                self.dataSource = data
+            case .failure(let error):
+                print("API Caller getTrendingMovie did finish with error: \(error)")
             }
         }
     }
